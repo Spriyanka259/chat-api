@@ -24,6 +24,10 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 * mysql -uroot
 * create database chatapi;
 
+## Pre-requisites
+* Make sure Java, Maven and MySQL is installed properly before running the project
+* Make sure chatapi database is created properly
+
 ## Steps
 * git clone https://github.com/Spriyanka259/chat-api.git
 * mvn clean install
