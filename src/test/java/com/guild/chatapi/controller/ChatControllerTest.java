@@ -3,6 +3,10 @@ package com.guild.chatapi.controller;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,13 +26,15 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.google.gson.Gson;
+import com.guild.chatapi.controller.ChatController;
 import com.guild.chatapi.model.ChatMessage;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 class ChatControllerTest {
-
+	
 	@Autowired
 	private MockMvc mockMvc;
 
@@ -41,10 +47,19 @@ class ChatControllerTest {
 
 	@Test
 	void testSendMessage() throws Exception {
+		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		        .appendPattern("yyyy-MM-dd[ HH:mm:ss]")
+		        .parseDefaulting(ChronoField.HOUR_OF_DAY, 0)
+		        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+		        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+		        .toFormatter();
+		
 		ChatMessage mockChatMessage = new ChatMessage();
 		mockChatMessage.setContent("hi");
 		mockChatMessage.setSender("A");
 		mockChatMessage.setRecipient("B");
+		LocalDateTime.parse("2022-01-17", formatter);
+		mockChatMessage.setCreateDateTime(LocalDateTime.parse("2022-01-17", formatter));
 
 		String inputJson = new Gson().toJson(mockChatMessage);
 		when(chatController.sendMessage(mockChatMessage)).thenReturn("message sent successfully");
