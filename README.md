@@ -38,5 +38,5 @@ API is up and running at http://localhost:8080/
     "content": "Hello"
 }
 * GET http://localhost:8080/messages/from/{Sender}/to/{Recipient}
-      * http://localhost:8080/messages/from/John/to/Doe
+    *  http://localhost:8080/messages/from/John/to/Doe
 * GET http://localhost:8080/messages/all
