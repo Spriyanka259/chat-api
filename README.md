@@ -40,4 +40,4 @@ API is up and running at http://localhost:8080/
 * GET http://localhost:8080/messages/from/{Sender}/to/{Recipient}
     *  http://localhost:8080/messages/from/John/to/Doe
 * GET http://localhost:8080/messages/all
-* API Documentation at: https://documenter.getpostman.com/view/15553468/UVXnFtpd
+* API Documentation [link](https://documenter.getpostman.com/view/15553468/UVXnFtpd)
