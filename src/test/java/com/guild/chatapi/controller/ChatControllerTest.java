@@ -24,15 +24,20 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.guild.chatapi.model.ChatMessage;
 
-
+/**
+ * Junit tests for Controller class
+ * 
+ * @author priyankasirigadde
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 class ChatControllerTest {
-	
+
 	@Autowired
 	private MockMvc mockMvc;
-	
+
 	@Autowired
 	private ObjectMapper mapper;
 
@@ -45,15 +50,13 @@ class ChatControllerTest {
 
 	@Test
 	void testSendMessage() throws Exception {
-		
+
 		ChatMessage mockChatMessage = new ChatMessage();
 		mockChatMessage.setContent("hi");
 		mockChatMessage.setSender("A");
 		mockChatMessage.setRecipient("B");
 
-		
 		String inputJson = mapper.writeValueAsString(mockChatMessage);
-		System.out.println("**======:: " + inputJson);
 		when(chatController.sendMessage(mockChatMessage)).thenReturn("message sent successfully");
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/message")
 				.contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson);
