@@ -33,9 +33,10 @@ API is up and running at http://localhost:8080/
 ## Test in Postman
 * POST http://localhost:8080/message 
 * Request Body: {
-    "sender": "A",
-    "recipient": "B",
+    "sender": "John",
+    "recipient": "Doe",
     "content": "Hello"
 }
-* GET http://localhost:8080/messages/from/A/to/B
+* GET http://localhost:8080/messages/from/{Sender}/to/{Recipient}
+      * http://localhost:8080/messages/from/John/to/Doe
 * GET http://localhost:8080/messages/all
