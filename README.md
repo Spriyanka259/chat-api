@@ -32,7 +32,7 @@ API is up and running at http://localhost:8080/
 
 ## Test in Postman
 * POST http://localhost:8080/message 
-* Request Body: {
+    *  Request Body: {
     "sender": "John",
     "recipient": "Doe",
     "content": "Hello"
