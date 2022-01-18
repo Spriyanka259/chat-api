@@ -32,7 +32,6 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 ```bash
 API must be up and running at http://localhost:8080/
 ```
-## SQL Dump
 
 ## Test in Postman
 * POST http://localhost:8080/message 
