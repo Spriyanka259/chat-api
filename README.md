@@ -19,6 +19,10 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 * mvn -v (To check if maven is installed)
 
 ## Install MySQL
+* brew install mysql
+* /usr/local/opt/mysql/bin/mysqld_safe --datadir=/usr/local/var/mysql
+* mysql -uroot
+* create database chatapi;
 
 ## Steps
 * git clone https://github.com/Spriyanka259/chat-api.git
@@ -26,7 +30,7 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 * mvn spring-boot:run
 
 ```bash
-API is up and running at http://localhost:8080/
+API must be up and running at http://localhost:8080/
 ```
 ## SQL Dump
 
