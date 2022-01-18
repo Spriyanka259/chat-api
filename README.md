@@ -10,13 +10,13 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 ## Install Java
 * brew install java
 * sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-* java -version (To check if Java is installed)
+* java -version (To check if Java version 14 or above is installed)
 
 ## Install Maven
 * brew install maven
 * echo 'export MAVEN_HOME=/usr/local/Cellar/maven/3.6.3_1' >> ~/.bash_profile
 * echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bash_profile
-* mvn -v (To check if maven is installed)
+* mvn -v (To check if maven 3.8.1 is installed)
 
 ## Install MySQL
 * brew install mysql
@@ -25,7 +25,7 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 * create database chatapi;
 
 ## Pre-requisites
-* Make sure Java, Maven and MySQL is installed properly before running the project
+* Make sure Java 14 or above, Maven 3.8.1 and MySQL is installed properly before running the project
 * Make sure chatapi database is created properly
 
 ## Steps
