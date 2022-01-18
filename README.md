@@ -6,7 +6,7 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 * Recent messages can be requested from all senders 
     * By default, only messages from the last 30 days should be returned. Additionally, there should be a limit of 100 messages in a response.
 
-# Environment SetUp
+# Environment SetUp on Mac
 ## Install Java
 * brew install java
 * sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
@@ -19,4 +19,23 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 * mvn -v (To check if maven is installed)
 
 ## Install MySQL
-* 
+
+## Steps
+* git clone https://github.com/Spriyanka259/chat-api.git
+* mvn clean install
+* mvn spring-boot:run
+
+```bash
+API is up and running at http://localhost:8080/
+```
+## SQL Dump
+
+## Test in Postman
+* POST http://localhost:8080/message 
+* Request Body: {
+    "sender": "A",
+    "recipient": "B",
+    "content": "Hello"
+}
+* GET http://localhost:8080/messages/from/A/to/B
+* GET http://localhost:8080/messages/all
