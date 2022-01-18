@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.guild.chatapi"},{"l":"com.guild.chatapi.controller"},{"l":"com.guild.chatapi.exception"},{"l":"com.guild.chatapi.model"},{"l":"com.guild.chatapi.repository"},{"l":"com.guild.chatapi.service"}]

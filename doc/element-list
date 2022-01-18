@@ -1,0 +1,6 @@
+com.guild.chatapi
+com.guild.chatapi.controller
+com.guild.chatapi.exception
+com.guild.chatapi.model
+com.guild.chatapi.repository
+com.guild.chatapi.service
