@@ -10,7 +10,7 @@ Simple implementation of Rest API using Spring Boot, Hibernate and Maven for cha
 ## Install Java
 * brew install java
 * sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-* java -version (This gives the java version)
+* java -version (To check if Java is installed)
 
 ## Install Maven
 * brew install maven
